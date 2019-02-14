@@ -1,0 +1,96 @@
+$primary-color: #fff;
+$secondary-color: #6d6d6d;
+$tertiary-color: #a3c819;
+$quaternary-color: #3489c1;
+$quinary-color: #df1d51;
+$elementary-color: #222343;
+$complementary-color: #202020;
+$events-bg-color: #14202e;
+$primary-hover: #f1f1f1;
+$overlay-color: #000000;
+
+$default-top-margin: 30px;
+$default-section-margin: 30px;
+
+// Fonts
+@font-face {
+    font-family: 'Gotham';
+    src: url('/src/fonts/Gotham/GOTHAM-BOLD.eot') format('eot'),
+         url('/src/fonts/Gotham/GOTHAM-BOLD.ttf') format('truetype'),
+         url('/src/fonts/Gotham/GOTHAM-BOLD.svg#GOTHAM-BOLD') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0.4px;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('/src/fonts/Gotham/GOTHAM-MEDIUM.eot') format('eot'),
+         url('/src/fonts/Gotham/GOTHAM-MEDIUM.ttf') format('truetype'),
+         url('/src/fonts/Gotham/GOTHAM-MEDIUM.svg#GOTHAM-MEDIUM') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.4px;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('/src/fonts/Gotham/GOTHAM-LIGHT.eot') format('eot'),
+         url('/src/fonts/Gotham/GOTHAM-LIGHT.ttf') format('truetype'),
+         url('/src/fonts/Gotham/GOTHAM-LIGHT.svg#GOTHAM-LIGHT') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.4px;
+}
+
+// Font sizes
+$section-title-size: 1.8rem;
+$section-subtitle-size: 1.2rem;
+$article-title-size: 1.4rem;
+$article-text-size: 1.2rem;
+
+
+// Extra small devices (portrait phones, less than 576px)
+$smartphones-sm: "only screen and (max-width: 575px)";
+// Small devices (landscape phones, 576px and up)
+$smartphones: "only screen and (max-width: 767px)";
+// Medium devices (tablets, 768px and up)
+$tablets: "only screen and (min-width: 768px) and (max-width: 991px)";
+// Large devices (desktops, 992px and up)
+$desktops-sm: "only screen and (min-width: 992px) and (max-width: 1199px)";
+// Extra large devices (large desktops, 1200px and up)
+$desktops: "only screen and (min-width: 1200px)";
+
+// Mixins
+@mixin flexbox($direction: row, $align: center, $justify: center, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+
+@mixin border($borderWidth: 1px, $borderType: solid, $borderColor: white, $borderRadius: 0) {
+    border: $borderWidth $borderType $borderColor;
+    border-radius: $borderRadius;
+}
+
+.linha-tricolor {
+    content: '';
+    height: 4px;
+    background: linear-gradient(
+        to right,
+        $tertiary-color 33%,
+        $quaternary-color 33%,
+        $quaternary-color 66%,
+        $quinary-color 66%,
+        $quinary-color 100%
+    );
+    display: block;
+    width: 160px;
+    margin: 10px auto;
+
+    @media only screen and (max-width: 767px) {
+        margin: 20px auto 10px;
+    }
+}

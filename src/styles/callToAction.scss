@@ -1,0 +1,25 @@
+@import 'variables';
+
+#call_to_action {
+  @include flexbox(column, center, center);
+  height: 30vh;
+  background: url('/src/images/bg-cta.png') no-repeat center;
+  background-size: cover;
+  padding: 30px;
+  margin: 60px 0;
+
+  .section-title {
+    color: $primary-color;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin: 20px 0;
+    height: auto;
+    padding: 40px 20px;
+
+    .section-title {
+      margin-top: 0;
+    }
+  }
+
+}
