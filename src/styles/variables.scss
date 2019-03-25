@@ -1,13 +1,11 @@
-$primary-color: #fff;
-$secondary-color: #6d6d6d;
-$tertiary-color: #a3c819;
-$quaternary-color: #3489c1;
-$quinary-color: #df1d51;
-$elementary-color: #222343;
-$complementary-color: #202020;
-$events-bg-color: #14202e;
-$primary-hover: #f1f1f1;
-$overlay-color: #000000;
+$primary-color: #3d3b72;
+$secondary-color: #c94106;
+$tertiary-color: #282828;
+$elementary-color: #717171;
+$complementary-color: #002b7f;
+$bg-primary-color: #e0e0e0;
+
+$primary-font: 'Titillium Web';
 
 $default-top-margin: 30px;
 $default-section-margin: 30px;
@@ -44,10 +42,10 @@ $default-section-margin: 30px;
 }
 
 // Font sizes
-$section-title-size: 1.8rem;
-$section-subtitle-size: 1.2rem;
-$article-title-size: 1.4rem;
-$article-text-size: 1.2rem;
+$section-title-size: 3.8rem;
+$section-subtitle-size: 2.2rem;
+$article-title-size: 3rem;
+$article-text-size: 2.2rem;
 
 
 // Extra small devices (portrait phones, less than 576px)
@@ -75,22 +73,22 @@ $desktops: "only screen and (min-width: 1200px)";
     border-radius: $borderRadius;
 }
 
-.linha-tricolor {
-    content: '';
-    height: 4px;
-    background: linear-gradient(
-        to right,
-        $tertiary-color 33%,
-        $quaternary-color 33%,
-        $quaternary-color 66%,
-        $quinary-color 66%,
-        $quinary-color 100%
-    );
-    display: block;
-    width: 160px;
-    margin: 10px auto;
+// .linha-tricolor {
+//     content: '';
+//     height: 4px;
+//     background: linear-gradient(
+//         to right,
+//         $tertiary-color 33%,
+//         $quaternary-color 33%,
+//         $quaternary-color 66%,
+//         $quinary-color 66%,
+//         $quinary-color 100%
+//     );
+//     display: block;
+//     width: 160px;
+//     margin: 10px auto;
 
-    @media only screen and (max-width: 767px) {
-        margin: 20px auto 10px;
-    }
-}
+//     @media only screen and (max-width: 767px) {
+//         margin: 20px auto 10px;
+//     }
+// }

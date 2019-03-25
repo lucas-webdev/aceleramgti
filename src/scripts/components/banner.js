@@ -1,8 +1,15 @@
 const template = `
-    <section id="banner" :style="{backgroundImage : imgPath}">
-        <h1 id="banner__title">{{title}}</h1>
-        <div class="banner__text">{{text}}</div>
-        <default-button v-if="showButton" @click.prevent="smoothScroll" buttonType="secondary" :buttonLabel="buttonText" :buttonLink="buttonLink"></default-button>
+    <section id="banner">
+        <div class="banner__content">
+            <div class="banner__box">
+                <div class="banner__box__title article-title-font">{{title}}</div>
+                <div class="banner__box__text article-text-font">{{text}}</div>
+            </div>
+            <default-button class="banner__button" v-if="showButton" @click.prevent="smoothScroll" buttonType="secondary" :buttonLabel="buttonText" :buttonLink="buttonLink"></default-button>
+        </div>
+        <div class="banner__image">
+            <img :src="imgPath" :alt="imgAlt" :title="imgTitle" />
+        </div>
     </section>
 `
 
@@ -26,9 +33,17 @@ const Banner = Vue.component('Banner', {
             type: String,
             default: ''
         },
+        imgAlt: {
+            type: String,
+            default: ''
+        },
+        imgTitle: {
+            type: String,
+            default: ''
+        },
         showButton: {
             type: Boolean,
-            default: false
+            default: true
         },
         buttonText: {
             type: String,
@@ -38,11 +53,6 @@ const Banner = Vue.component('Banner', {
             type: String,
             default: ''
         },
-    },
-    computed: {
-        activeBannerImage() {
-            return this.imgPath;
-        }
     },
     methods: {
         smoothScroll(anchor) {
