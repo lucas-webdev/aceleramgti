@@ -1,0 +1,20 @@
+@import 'variables';
+
+#quem_somos {
+	height: 50vh;
+	background-color: white;
+	padding: 150px;
+}
+
+.quem-somos {
+	&__container {
+		@include flexbox();
+	}
+	&__image {
+		flex-shrink: 0;
+	}
+	&__title {
+		margin-bottom: 35px;
+	}
+
+}

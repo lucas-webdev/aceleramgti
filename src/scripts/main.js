@@ -1,5 +1,6 @@
 import DefaultButton from './components/default-button.js';
-import Banner from './components/banner.js'
+import Banner from './components/banner.js';
+import QuemSomos from './components/quem-somos.js';
 
 $(function() {
     'use strict';
@@ -8,7 +9,8 @@ $(function() {
         el: '#aceleramgti',
         componets: {
             DefaultButton,
-            Banner
+            Banner,
+            QuemSomos
         }
     });
 });

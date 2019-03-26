@@ -12,6 +12,14 @@
         .banner__box {
             background-color: white;
             padding: 30px;
+
+            &__title {
+                margin-bottom: 35px;
+
+                &::after {
+                    @include titleBorder();
+                }
+            }
         }
     }
 

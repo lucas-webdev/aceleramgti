@@ -25,6 +25,7 @@ body {
     padding: 10px 25px;
     background-color: white;
     width: auto;
+    border: 2px solid $secondary-color;
     
     &--primary {
         font-size: 0.85rem;
@@ -41,3 +42,4 @@ body {
 
 @import 'fonts-themes.scss';
 @import 'banner';
+@import 'quem-somos';

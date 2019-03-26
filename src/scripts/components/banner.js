@@ -11,7 +11,7 @@ const template = `
             <img :src="imgPath" :alt="imgAlt" :title="imgTitle" />
         </div>
     </section>
-`
+`;
 
 import DefaultButton from './default-button.js';
 
