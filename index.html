@@ -12,17 +12,49 @@
 </head>
 <body>
     <div id="aceleramgti">
-        <banner
+        <two-half-container id="banner"
             title="Lorem ipsum dolor sit ametalin"
             text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda. Id populo oportere inciderint duo, ex illum tantas noster mei. Tation convenire tractatos eos te."
             img-path="./dist/images/banner-acelera.png"
             button-text="SAIBA MAIS"
             :show-button=true>
-        </banner>
+        </two-half-container>
         <quem-somos
             img-path="./dist/images/imagem-quem-somos.png"
             text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda. Id populo oportere inciderint duo, ex illum tantas noster mei. Tation convenire tractatos eos te."
         ></quem-somos>
+        <div id="jeito_acelera">
+            <two-half-container
+                title="Lorem ipsum dolor sit ametalin"
+                text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda."
+                :text-box="false"
+                text-alignment="left"
+                vertical-alignment="start"
+                img-path="./dist/images/banner-acelera.png"
+                img-side="left"
+                :show-button=false>
+            </two-half-container>
+            <two-half-container
+                title="Lorem ipsum dolor sit ametalin"
+                text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda."
+                :text-box="false"
+                text-alignment="right"
+                vertical-alignment="start"
+                img-path="./dist/images/banner-acelera.png"
+                img-side="right"
+                :show-button=false>
+            </two-half-container>
+            <two-half-container
+                title="Lorem ipsum dolor sit ametalin"
+                text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda."
+                :text-box="false"
+                text-alignment="left"
+                vertical-alignment="start"
+                img-path="./dist/images/banner-acelera.png"
+                img-side="left"
+                :show-button=false>
+            </two-half-container>
+        </div>
     </div>
 
     <script

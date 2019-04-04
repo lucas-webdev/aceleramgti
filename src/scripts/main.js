@@ -1,5 +1,5 @@
 import DefaultButton from './components/default-button.js';
-import Banner from './components/banner.js';
+import TwoHalfContainer from './components/half-container.js';
 import QuemSomos from './components/quem-somos.js';
 
 $(function() {
@@ -9,7 +9,7 @@ $(function() {
         el: '#aceleramgti',
         componets: {
             DefaultButton,
-            Banner,
+            TwoHalfContainer,
             QuemSomos
         }
     });
