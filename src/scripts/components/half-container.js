@@ -1,5 +1,5 @@
 const template = `
-    <section class="half-container">
+    <section class="half-container" :class="{'auto-height' : autoHeight}">
         <div class="half-container__content" :class="[contentSide, verticalAlignment]">
             <div class="half-container__box" :class="textBoxBgClass">
                 <div class="half-container__box__title article-title-font" :class="textAlignment">{{title}}</div>
@@ -69,6 +69,10 @@ const TwoHalfContainer = Vue.component('TwoHalfContainer', {
             type: String,
             default: ''
         },
+        autoHeight: {
+            type: Boolean,
+            default: false
+        }
     },
     computed: {
         contentSide() {

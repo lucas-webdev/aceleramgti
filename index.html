@@ -7,11 +7,12 @@
     <title>Acelera MG</title>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/dist/styles/main.css">
+    <link rel="stylesheet" href="./dist/styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 <body>
     <div id="aceleramgti">
+        <main-menu></main-menu>
         <two-half-container id="banner"
             title="Lorem ipsum dolor sit ametalin"
             text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda. Id populo oportere inciderint duo, ex illum tantas noster mei. Tation convenire tractatos eos te."
@@ -19,10 +20,18 @@
             button-text="SAIBA MAIS"
             :show-button=true>
         </two-half-container>
-        <quem-somos
-            img-path="./dist/images/imagem-quem-somos.png"
-            text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda. Id populo oportere inciderint duo, ex illum tantas noster mei. Tation convenire tractatos eos te."
-        ></quem-somos>
+        <div id="quem_somos">
+            <two-half-container
+                title="O AceleraMGTI"
+                text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda. Id populo oportere inciderint duo, ex illum tantas noster mei. Tation convenire tractatos eos te."
+                img-path="./dist/images/imagem-quem-somos.png"
+                :show-button="false"
+                :text-box="false"
+                img-side="left"
+                :auto-height="true"
+            >
+            </two-half-container>
+        </div>
         <div id="jeito_acelera">
             <two-half-container
                 title="Lorem ipsum dolor sit ametalin"
@@ -30,7 +39,7 @@
                 :text-box="false"
                 text-alignment="left"
                 vertical-alignment="start"
-                img-path="./dist/images/banner-acelera.png"
+                img-path="./dist/images/personalizacao.png"
                 img-side="left"
                 :show-button=false>
             </two-half-container>
@@ -40,7 +49,7 @@
                 :text-box="false"
                 text-alignment="right"
                 vertical-alignment="start"
-                img-path="./dist/images/banner-acelera.png"
+                img-path="./dist/images/validacao.png"
                 img-side="right"
                 :show-button=false>
             </two-half-container>
@@ -50,7 +59,7 @@
                 :text-box="false"
                 text-alignment="left"
                 vertical-alignment="start"
-                img-path="./dist/images/banner-acelera.png"
+                img-path="./dist/images/conexao.png"
                 img-side="left"
                 :show-button=false>
             </two-half-container>
@@ -64,6 +73,6 @@
     </script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script type="module" src="/src/scripts/main.js"></script>
+    <script type="module" src="./src/scripts/main.js"></script>
 </body>
 </html>

@@ -2,6 +2,10 @@
     @include flexbox(row, normal, flex-start, nowrap);
     height: calc(50vw);
 
+    &.auto-height {
+        height: auto;
+    }
+
     .half-container__content {
         background-color: $bg-primary-color;
         width: 50vw;

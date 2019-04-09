@@ -5,9 +5,11 @@
 
 	.half-container {
 		position: relative;
+		height: auto;
 
 		&__content {
 			background-color: transparent;
+
 			&.start {
 				padding: 50px 80px;
 			}
@@ -21,6 +23,17 @@
 			}
 		}
 
+		&__image {
+			flex-shrink: 0;
+
+			img {
+				max-width: 100%;
+				height: auto;
+				position: relative;
+			}
+
+		}
+
 		&::before {
 			content: '';
 			width: 150px;
@@ -29,6 +42,7 @@
 			height: 3px;
 			background-color: $bg-primary-color;
 			right: calc(50vw - 80px);
+			z-index: 1;
 		}
 	} 
 }

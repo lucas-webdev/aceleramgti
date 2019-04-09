@@ -1,0 +1,28 @@
+@import 'variables';
+
+.menu {
+	background-color: $tertiary-color;
+
+	ul {
+		list-style: none;
+		@include flexbox(row, center, space-around, nowrap);
+		height: 90px;
+		margin: 0;
+
+		li {
+			&.logo {
+				img {
+					width: auto;
+					max-height: 50px;
+				}
+			}
+
+			a {
+				color: white;
+				text-decoration: none;
+				font-style: italic;
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
