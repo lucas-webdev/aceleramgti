@@ -11,7 +11,15 @@
 			background-color: transparent;
 
 			&.start {
-				padding: 50px 80px;
+				padding: 15px 0;
+	
+				&.right {
+					padding-left: 75px;
+				}
+
+				&.left {
+					padding-right: 75px;
+				}
 			}
 
 			.half-container__box__title {
@@ -25,24 +33,29 @@
 
 		&__image {
 			flex-shrink: 0;
+			width: calc(50vw + 1.6%);
 
 			img {
-				max-width: 100%;
-				height: auto;
 				position: relative;
+				width: 100%;
+				height: auto;
+				max-height: 100%;
 			}
-
 		}
 
 		&::before {
 			content: '';
 			width: 150px;
 			position: absolute;
-			top: 110px;
+			top: 80px;
 			height: 3px;
 			background-color: $bg-primary-color;
 			right: calc(50vw - 80px);
 			z-index: 1;
+		}
+
+		&__box {
+			padding: 40px 15px 20px;
 		}
 	} 
 }
