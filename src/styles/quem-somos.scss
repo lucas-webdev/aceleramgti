@@ -1,16 +1,22 @@
 @import 'variables';
 
 #quem_somos {
-	padding: 100px;
+	padding: 100px 0;
 	background-color: white;
 
 	.half-container {
 		&__content {
 			background-color: transparent;
+			width: calc(100vw / 3 * 2);
+
+			.half-container__box {
+				padding: 0;
+			}
 		}
 
 		&__image {
 			height: auto;
+			width: calc(100vw / 3);
 			
 			img {
 				height: auto;

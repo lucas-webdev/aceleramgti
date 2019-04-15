@@ -2,6 +2,15 @@
 
 .menu {
 	background-color: $tertiary-color;
+	width: 100%;
+	position: relative;
+	
+	.menu-border {
+		width: 100%;
+		border: 3px solid transparent;
+		border-image: linear-gradient(to right, $secondary-color 0%, $complementary-color 100%);
+		border-image-slice: 10;
+	}
 
 	ul {
 		list-style: none;
@@ -21,7 +30,6 @@
 				color: white;
 				text-decoration: none;
 				font-style: italic;
-				font-size: 1.5rem;
 			}
 		}
 	}

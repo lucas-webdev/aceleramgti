@@ -7,9 +7,10 @@ const TEMPLATE = `
                 </a>
             </li>
             <li v-for="item in menuItems">
-                <a :href="item.link">{{item.text}}</a>
+                <a class="article-text-font" :href="item.link">{{item.text}}</a>
             </li>
         </ul>
+        <div class="menu-border"></div>
     </nav>
 `;
 

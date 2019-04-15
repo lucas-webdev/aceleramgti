@@ -11,25 +11,31 @@
 			background-color: transparent;
 
 			&.start {
-				padding: 15px 0;
-	
+
 				&.right {
-					padding-left: 75px;
+					padding-left: 55px;
 				}
 
 				&.left {
-					padding-right: 75px;
+					padding-right: 55px;
+				}
+			}
+			
+			.half-container__box {
+				padding: 0 15px 20px;
+				margin-top: 65px;
+				
+				&__title {
+					color: $secondary-color;
+
+					&::after {
+						display: none;
+					}
 				}
 			}
 
-			.half-container__box__title {
-				color: $secondary-color;
-
-				&::after {
-					display: none;
-				}
-			}
 		}
+		
 
 		&__image {
 			flex-shrink: 0;
@@ -54,8 +60,5 @@
 			z-index: 1;
 		}
 
-		&__box {
-			padding: 40px 15px 20px;
-		}
 	} 
 }

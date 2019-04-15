@@ -1,2 +1,13 @@
 @import 'variables';
 
+#banner {
+	.half-container__box {
+		&__title {
+			font-size: 1.6rem;
+		}
+
+		&__text {
+			font-size: 1.3rem;
+		}
+	}
+}

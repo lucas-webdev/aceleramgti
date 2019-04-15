@@ -1,0 +1,15 @@
+@import 'variables';
+
+.vertical-box {
+	@include flexbox(column, normal, flex-start, nowrap);
+	background-color: $bg-secondary-color;
+	border-top: 3px solid $border-gray;
+	height: 95%;
+
+	&:hover {
+		height: 100%;
+		transition-duration: 0.5s;
+		background-color: $bg-primary-color;
+		border-color: $secondary-color;
+	}
+}

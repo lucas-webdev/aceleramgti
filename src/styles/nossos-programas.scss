@@ -1,0 +1,7 @@
+#nossos_programas {
+	@include flexbox(row, normal, flex-start, wrap);
+
+	.vertical-box {
+		width: calc(100vw / 3);
+	}
+}
