@@ -13,10 +13,10 @@ $default-top-margin: 30px;
 $default-section-margin: 30px;
 
 // Font sizes
-$section-title-size: 1.8rem;
-$section-subtitle-size: 1.6rem;
-$article-title-size: 1.4rem;
-$article-text-size: 1.2rem;
+$section-title-size: 2.2rem;
+$section-subtitle-size: 2rem;
+$article-title-size: 1.8rem;
+$article-text-size: 1.4rem;
 
 // Extra small devices (portrait phones, less than 576px)
 $smartphones-sm: "only screen and (max-width: 575px)";
@@ -45,9 +45,9 @@ $desktops: "only screen and (min-width: 1200px)";
 
 @mixin titleBorder() {
     content: '';
-    width: 100px;
-    border: 2px solid $secondary-color;
+    width: 60px;
+    border: 1px solid $secondary-color;
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
 }

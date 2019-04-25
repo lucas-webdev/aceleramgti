@@ -1,0 +1,49 @@
+#nossos_parceiros {
+	@include flexbox(column, center, flex-start, wrap);
+	color: $elementary-color;
+
+	> div:first-child {
+		margin-top: 25px;
+		text-align: center;
+		font-size: 1.6rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: $article-title-size;
+    	color: $primary-color;
+		
+		&::after {
+			@include titleBorder();
+		}
+	}
+
+	.parceiros-acelera {
+		margin-top: 25px;
+		@include flexbox(row, center, space-around, nowrap);
+
+		.vertical-box {
+			width: 20%;
+			border: none;
+
+			&__image {
+				height: 100px;
+				width: 100%;
+				background-color: $primary-color;
+				@include flexbox(row, center, center, nowrap);
+
+				img {
+					width: 60px;
+				}
+			}
+
+			&__content {
+				padding: 10px 25px;
+				@include flexbox(column, center, center, nowrap);
+			}
+
+			&__text {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

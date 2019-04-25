@@ -4,10 +4,18 @@ const template = `
 		<img :src="imgPath">
 	</div>
 	<div class="vertical-box__content">
-		<div class="vertical-box__title">{{title}}</div>
+		<div v-if="title" class="vertical-box__title">{{title}}</div>
 		<div class="vertical-box__text">{{text}}</div>
 		<div class="vertical-box__cta">
-			<a :href="ctaLink" target="_blank">{{ctaText}}</a>
+			<a v-if="!showButton" :href="ctaLink" target="_blank">{{ctaText}}</a>
+			<default-button 
+				v-else
+				buttonTarget="_blank"
+				class="half-container__button" 
+				buttonType="secondary" 
+				:buttonLabel="ctaText" 
+				:buttonLink="ctaLink">
+			</default-button>
 		</div>
 	</div>
 </div>
@@ -27,6 +35,10 @@ const VerticalBox = Vue.component('VerticalBox', {
 		text: {
 			type: String,
 			default: ''
+		},
+		showButton: {
+			type: Boolean,
+			default: false
 		},
 		ctaText: {
 			type: String,

@@ -1,7 +1,61 @@
 #nossos_programas {
-	@include flexbox(row, normal, flex-start, wrap);
+	@include flexbox(column, center, flex-start, wrap);
+	background-color: white;
+	color: $elementary-color;
 
-	.vertical-box {
-		width: calc(100vw / 3);
+	> div:first-child {
+		margin-top: 25px;
+		text-align: center;
+		font-size: 1.6rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: $article-title-size;
+    	color: $primary-color;
+		
+		&::after {
+			@include titleBorder();
+		}
+	}
+
+
+	.programas-acelera {
+		@include flexbox(row, flex-end, flex-start, wrap);
+		height: 400px;
+
+		.vertical-box {
+			width: calc(100% / 3);
+			height: 340px;
+			padding-top: 15px;
+
+			&:hover {
+				height: 350px;
+				border-image: linear-gradient(to right, $secondary-color 0%, $complementary-color 100%);
+				border-image-slice: 10;
+				
+				.vertical-box__title {
+					color: $secondary-color;
+				}
+			}
+
+			&__title {
+				font-size: 1.6rem;
+			}
+
+			&__image {
+				text-align: center;
+
+				img {
+					width: 35%;
+				}
+			}
+
+			&__content {
+				text-align: center;
+				padding: calc(100% / 12);
+				font-size: 1.2rem;
+			}
+		}
+
 	}
 }

@@ -1,0 +1,19 @@
+#depoimentos_acelera {
+	@include flexbox(column, center, flex-start, wrap);
+	height: 200px;
+
+	> div:first-child {
+		margin-top: 25px;
+		text-align: center;
+		font-size: 1.6rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: $article-title-size;
+    	color: $primary-color;
+		
+		&::after {
+			@include titleBorder();
+		}
+	}
+}
