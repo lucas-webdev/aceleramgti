@@ -3,6 +3,7 @@ import TwoHalfContainer from './components/half-container.js';
 import QuemSomos from './components/quem-somos.js';
 import MainMenu from './components/menu.js';
 import VerticalBox from './components/vertical-box.js';
+import ContactForm from './components/contact-form.js';
 
 $(function() {
     'use strict';
@@ -14,7 +15,8 @@ $(function() {
             DefaultButton,
             TwoHalfContainer,
             QuemSomos,
-            VerticalBox
+            VerticalBox,
+            ContactForm
         }
     });
 });

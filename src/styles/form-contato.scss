@@ -1,0 +1,77 @@
+#contato_acelera {
+  background: $bg-contact;
+  @include flexbox(row, center, flex-start, nowrap);
+  height: 895px;
+  max-height: 895px;
+
+  .imagem-contato {
+    height: 895px;
+  }
+  
+  .form-contato {
+    @include flexbox(column, center, flex-start, wrap);
+    width: 100%;
+    
+    .contact-title {
+      color: white;
+      font-size: 3.2rem;
+      margin-bottom: 25px;
+
+      &::after {
+        @include titleBorder();
+      }
+    }
+    
+    .contact-text {
+      color: white;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      padding: 0 25px;
+    }
+
+    input,
+    textarea {
+      height: 40px;
+      width: 100%;
+      border: 0;
+      padding: 0;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    .campos-form {
+      @include flexbox(row, center, space-evenly, wrap);
+      width: 100%;
+
+      label {
+        @include flexbox(column, flex-start, flex-start, wrap);
+        width: calc(100% /3);
+        margin: 10px 10px 25px;
+
+        span {
+          color: white;
+          margin-bottom: 3px;
+        }
+
+        &:last-child {
+          width: 79%;
+        }
+      }
+
+    }
+
+    .contact-form__button {
+      border: 0;
+      height: 70px;
+      width: 40%;
+      color: white;
+      font-size: 2rem;
+      font-family: $primary-font;
+      margin-top: 35px;
+    }
+  }
+
+  
+}

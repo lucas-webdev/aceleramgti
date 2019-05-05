@@ -3,22 +3,6 @@
 	background-color: white;
 	color: $elementary-color;
 
-	> div:first-child {
-		margin-top: 25px;
-		text-align: center;
-		font-size: 1.6rem;
-		position: relative;
-		display: flex;
-		align-items: center;
-		font-size: $article-title-size;
-    	color: $primary-color;
-		
-		&::after {
-			@include titleBorder();
-		}
-	}
-
-
 	.programas-acelera {
 		@include flexbox(row, flex-end, flex-start, wrap);
 		height: 400px;

@@ -13,7 +13,7 @@ const BannerContainer = Vue.component('BannerSlider', {
         currentBanner() {
             return this.images[Math.abs(this.currentIndex) % this.images.length];
         }
-    }
+    },
     methods: {
         startRotation() {
             this.timer = setInterval(this.next, 3000);

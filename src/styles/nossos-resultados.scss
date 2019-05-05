@@ -1,0 +1,14 @@
+#nossos_resultados {
+  background-color: $bg-primary-color;
+
+
+  .resultados-acelera {
+    margin: 25px 0;
+    @include flexbox(row, center, space-evenly, wrap);
+
+    img {
+      max-width: calc(100vw / 6);
+      margin: 20px 0;
+    }
+  }
+}

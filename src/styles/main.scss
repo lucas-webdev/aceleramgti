@@ -63,11 +63,34 @@ section {
     &--primary {
         font-size: 0.85rem;
         display: inline-block;
+        @include leftToRightDegrade($secondary-color, $primary-color);
     }
     
     &--secondary {
         font-size: 1.2rem;
     }
+}
+
+#cases_sucesso,
+#nossos_programas,
+#nossos_parceiros,
+#nossos_resultados {
+    @include flexbox(column, center, flex-start, wrap);
+
+    > div:first-child {
+		margin-top: 25px;
+		text-align: center;
+		font-size: 1.6rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: $article-title-size;
+    	color: $primary-color;
+		
+		&::after {
+			@include titleBorder();
+		}
+	}
 }
 
 @import 'fonts-themes.scss';
@@ -80,3 +103,5 @@ section {
 @import 'nossos-programas';
 @import 'nossos-parceiros';
 @import 'depoimentos-acelera';
+@import 'nossos-resultados';
+@import 'form-contato';
