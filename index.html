@@ -7,19 +7,40 @@
     <title>Acelera MG</title>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./dist/styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 <body>
     <div id="aceleramgti">
         <main-menu></main-menu>
-        <two-half-container id="banner"
-            title="Lorem ipsum dolor sit ametalin"
-            text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda. Id populo oportere inciderint duo, ex illum tantas noster mei. Tation convenire tractatos eos te."
-            img-path="./dist/images/banner-acelera.png"
-            button-text="SAIBA MAIS"
-            :show-button=true>
-        </two-half-container>
+        
+        <banner-slider>
+            <two-half-container id="banner_1" class="banner carousel-item active"
+                title="Para quem?"
+                text="Oferecemos programas de aceleração aberta, corporativa e de pré-aceleração universitária. Nossos serviços atendem empreendedores, empresas de diversos segmentos e instituições de ensino que buscam aproximar seus alunos às iniciativas de inovação e empreendedorismo."
+                img-path="./dist/images/banner-acelera.png"
+                button-text="Saiba mais"
+                :show-button=true>
+            </two-half-container>
+
+            <two-half-container id="banner_2" class="banner carousel-item"
+                title="Chamadas abertas"
+                text="Com o objetivo de desenvolver o ecossistema de startups mineiro, estamos constantemente com editais abertos para empreendedores de todo Brasil. Venha ser um case de sucesso do Acelera MGTI. Saiba quais chamadas estão abertos no momento."
+                img-path="./dist/images/imagem-banner2.png"
+                button-text="Quero participar"
+                :show-button=true>
+            </two-half-container>
+
+            <two-half-container id="banner_3" class="banner carousel-item"
+                title="Como fazemos?"
+                text="Nossa metodologia se baseia em 5 principais eixos de desenvolvimento: Mercado, Tecnologia, Investidor, Gestão e Empreendedor. Unimos metodologia e personalização para que as startups desempenhem o máximo do seu potencial."
+                img-path="./dist/images/imagem-banner3.png"
+                button-text="Saiba mais"
+                :show-button=true>
+            </two-half-container>
+        </banner-slider>
+
         <section id="quem_somos">
             <two-half-container
                 title="O AceleraMGTI"
@@ -32,6 +53,7 @@
             >
             </two-half-container>
         </section>
+        
         <section id="jeito_acelera">
             <div class="article-title-font">O jeito acelera</div>
             <two-half-container
@@ -65,90 +87,114 @@
                 :show-button=false>
             </two-half-container>
         </section>
+        
         <section id="nossos_programas">
             <div clas="article-title-font">Nossos programas</div>
             <div class="programas-acelera">
                 <vertical-box
                     img-path="./dist/images/ac-aberta.png"
                     title="Aceleração aberta"
-                    text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda."
+                    text="Este programa é oferecido para empreendedores(as) de startups de base tecnológica, multisetor, que se encontram em diferentes níveis de maturidade. Durante os 6 meses de aceleração, nosso objetivo é apoiar e capacitar o(a) empreendedor(a) com consultorias, mentorias, palestras e treinamentos para que seus negócios superem as barreiras e cresçam rapidamente."
                     cta-text="Saiba mais >"
                     cta-link="http://www.fumsoft.com.br">
                 </vertical-box>
                 <vertical-box
                     img-path="./dist/images/ac-universitaria.png"
                     title="Pré aceleração universitária"
-                    text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda."
+                    text="Focado em alunos universitários que desejam transformar suas idéias em um MVP (Produto Mínimo Viável) validado. Realizado através de hackathon, premia os 2 melhores modelos de negócio. O desenvolvimento e validação do MVP é feito com a orientação de consultores especializados nos eixos de mercado e tecnologia."
                     cta-text="Saiba mais >"
                     cta-link="http://www.fumsoft.com.br">
                 </vertical-box>
                 <vertical-box
                     img-path="./dist/images/ac-corporativa.png"
                     title="Aceleração corporativa"
-                    text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda."
+                    text="Desenvolvemos programas customizados para acelerar o processo de open innovation das corporações. Atuamos desde a definição dos problemas a serem resolvidos, a seleção das startups e o desenvolvimento do MVP validado, acelerando todo o processo de inovação para a corporação."
                     cta-text="Saiba mais >"
                     cta-link="http://www.fumsoft.com.br">
                 </vertical-box>
             </div>
         </section>
+        
         <section id="nossos_parceiros">
             <div clas="article-title-font">Nossos parceiros</div>
             <div class="parceiros-acelera">
                 <vertical-box
-                    img-path="./dist/images/logo_fumsoft.png"
-                    text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda."
+                    img-path="./dist/images/fapemig.png"
+                    text="A Fundação de Amparo à Pesquisa do Estado de Minas Gerais - FAPEMIG, agência de indução, fomento à pesquisa, inovação científica e tecnológica do Estado de Minas Gerais, tem sido primordial para o desenvolvimento dos programas de empreendedorismo da Fumsoft, por meio de recursos fomentados através de editais públicos."
                     :show-button="true"
                     cta-text="Saiba mais"
                     cta-link="http://www.fumsoft.com.br">
                 </vertical-box>
                 <vertical-box
-                    img-path="./dist/images/logo_fumsoft.png"
-                    text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda."
+                    img-path="./dist/images/pbh.png"
+                    text="Temos como forte apoiador das ações que visam desenvolvimento econômico do Município, a Secretaria Municipal de Desenvolvimento Econômico (SMDE) da Prefeitura de Belo Horizonte. Acompanha a Fumsoft desde a fundação, com ações focadas em desenvolver o ambiente de empreendedorismo em nossa cidade."
                     :show-button="true"
                     cta-text="Saiba mais"
                     cta-link="http://www.fumsoft.com.br">
                 </vertical-box>
                 <vertical-box
-                    img-path="./dist/images/logo_fumsoft.png"
-                    text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda."
+                    img-path="./dist/images/anprotec.png"
+                    text="Associação Nacional de Entidades Promotoras de Empreendimentos Inovadores - Anprotec, que tem como propósito transformar o país em uma sociedade empreendedora por meio do fortalecimento de ecossistemas de inovação que promovam o desenvolvimento social, ambiental e econômico."
                     :show-button="true"
                     cta-text="Saiba mais"
                     cta-link="http://www.fumsoft.com.br">
                 </vertical-box>
                 <vertical-box
-                    img-path="./dist/images/logo_fumsoft.png"
-                    text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis. Facilis minimum nam an, ei eos veri expetenda."
+                    img-path="./dist/images/bin.png"
+                    text="A rede BIN@ promove uma série de ações em prol da geração de conhecimento, de negócios e inovação através de eventos e programas de soft landing. Somos a única aceleradora de Minas Gerais a fazer parte da rede BIN@ – Business e Innovation juntamente com seus fundadores: Universidade do Porto - Portugal, Universidade de Sheffield - Inglaterra e USP – São Paulo"
                     :show-button="true"
                     cta-text="Saiba mais"
                     cta-link="http://www.fumsoft.com.br">
                 </vertical-box>
             </div>
         </section>
+        
         <section id="cases_sucesso">
             <div clas="article-title-font">Cases de sucesso</div>
             <div class="depoimentos-acelera">
-
+                <testimonials-slider>
+                    <testimonial
+                        class="carousel-item active"
+                        testimonial-text="Participar de um processo como esse, considerando a solidez da metodologia desenvolvida pelo Acelera MGTI,  proporciona além da base de conhecimento teórico, um atalho para conquista dos resultados através das conexões do programa. Então, aconselho fortemente."
+                        testimonial-name="Igor Senra"
+                        testimonial-company="Moip"
+                    ></testimonial>
+                    <testimonial
+                        class="carousel-item"
+                        testimonial-text="Estar no Acelera MGTI é mais do que fazer parte de uma programa de aceleração, é estar inserido em um ecossistema com várias iniciativas, conexões e oportunidades"
+                        testimonial-name="João Guilherme"
+                        testimonial-company="App Prova"
+                    ></testimonial>
+                    <testimonial
+                        class="carousel-item"
+                        testimonial-text="Tanto pelo apoio financeiro, quanto nas mentorias que nos ajudaram principalmente em desenvolvermos um produto inovador e fazermos um negócio onde todas as partes ficassem satisfeitas. Também nos tornamos o primeiro case de saída dessa nova fase da Acelera"
+                        testimonial-name="Claudio Correa"
+                        testimonial-company="One Cloud"
+                    ></testimonial>
+                </testimonials-slider>
             </div>
         </section>
+        
         <section id="nossos_resultados">
             <div clas="article-title-font">Resultados do Acelera</div>
             <div class="resultados-acelera">
-                <img src="./dist/images/logo_fumsoft.png" />
-                <img src="./dist/images/logo_fumsoft.png" />
-                <img src="./dist/images/logo_fumsoft.png" />
-                <img src="./dist/images/logo_fumsoft.png" />
-                <img src="./dist/images/logo_fumsoft.png" />
-                <img src="./dist/images/logo_fumsoft.png" />
-                <img src="./dist/images/logo_fumsoft.png" />
-                <img src="./dist/images/logo_fumsoft.png" />
-                <img src="./dist/images/logo_fumsoft.png" />
-                <img src="./dist/images/logo_fumsoft.png" />
+                <img src="./dist/images/moip.png" />
+                <img src="./dist/images/appprova.png" />
+                <img src="./dist/images/midhaz.png" />
+                <img src="./dist/images/ioasys.png" />
+                <img src="./dist/images/dito.png" />
+                <img src="./dist/images/onecloud.png" />
+                <img src="./dist/images/meucheckin.png" />
+                <img src="./dist/images/contentools.png" />
+                <img src="./dist/images/azapfy.png" />
+                <img src="./dist/images/treinus.png" />
             </div>
         </section>
+        
         <contact-form
-            contact-title="Seja parte dessa história"
-            contact-text="Lorem ipsum dolor sit amet, putant euripidis et est. Quo error probatus ne, prima splendide ne vis."
-            button-text="PARTICIPAR">
+            contact-title="Faça parte dessa história"
+            contact-text="Dúvidas, sugestões ou parcerias? Entre em contato conosco!"
+            button-text="Enviar mensagem">
         </contact-form>
     </div>
 
@@ -158,8 +204,10 @@
         crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script type="module" src="./src/scripts/main.js"></script>
 </body>
 </html>

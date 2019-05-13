@@ -11,7 +11,7 @@
     $hora_envio = date('H:i:s');
     
     // emails para quem será enviado o formulário
-    $destino = 'cmedeiros.lucas@gmail.com';
+    $destino = 'teste@gmail.com';
     $assunto = "Contato pelo Site";
   
     $headers  = 'MIME-Version: 1.0' . "\r\n";

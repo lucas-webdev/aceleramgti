@@ -1,18 +1,22 @@
 const template = `
-<section id="banner_slider">
-    <slot>
-</section>;
-`
+<section id="banner_slider" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+        <slot />
+    </div>
+    <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+    </a>
+</section>`;
 
-const BannerContainer = Vue.component('BannerSlider', {
+const BannerSlider = Vue.component('banner-slider', {
     template,
     mounted () {
-        this.startRotation();
-    },
-    computed: {
-        currentBanner() {
-            return this.images[Math.abs(this.currentIndex) % this.images.length];
-        }
+        // this.startRotation();
     },
     methods: {
         startRotation() {
@@ -32,3 +36,5 @@ const BannerContainer = Vue.component('BannerSlider', {
         }
     },
 });
+
+export default BannerSlider;

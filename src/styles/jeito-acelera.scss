@@ -1,6 +1,10 @@
 #jeito_acelera {
 	background-color: $bg-secondary-color;
 
+	> div:first-child {
+		margin-bottom: 65px;
+	}
+
 	.half-container {
 		position: relative;
 		height: auto;
@@ -25,10 +29,15 @@
 				
 				&__title {
 					color: $secondary-color;
+					font-size: 2.3rem;
 
 					&::after {
 						display: none;
 					}
+				}
+
+				&__content {
+					font-size: 1.6rem;
 				}
 			}
 

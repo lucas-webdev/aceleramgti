@@ -4,11 +4,12 @@
 
 	.parceiros-acelera {
 		margin-top: 25px;
-		@include flexbox(row, center, space-around, nowrap);
+		@include flexbox(row, normal, space-around, nowrap);
 
 		.vertical-box {
 			width: 20%;
 			border: none;
+			height: auto;
 
 			&__image {
 				height: 100px;
@@ -17,7 +18,7 @@
 				@include flexbox(row, center, center, nowrap);
 
 				img {
-					width: 60px;
+					width: 100%;
 				}
 			}
 

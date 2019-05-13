@@ -47,10 +47,11 @@ $desktops: "only screen and (min-width: 1200px)";
 @mixin titleBorder() {
     content: '';
     width: 60px;
-    border: 1px solid $secondary-color;
     position: absolute;
-    bottom: -5px;
+    bottom: -2px;
     left: 0;
+    height: 2px;
+    background-color: $secondary-color;
 }
 
 @mixin leftToRightDegrade($color1, $color2) {
@@ -60,4 +61,10 @@ $desktops: "only screen and (min-width: 1200px)";
  background-image: -ms-linear-gradient(left, $color1, $color2);
  background-image: -o-linear-gradient(left, $color1, $color2);
  background-image: linear-gradient(to right, $color1, $color2);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$color1, endColorstr=$color2);
+}
+
+@mixin transition($property, $delay, $duration) {
+    transition-delay: $delay;
+    transition-duration: $duration;
+    transition-property: $property; 
 }

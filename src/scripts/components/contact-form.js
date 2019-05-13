@@ -34,7 +34,7 @@ const TEMPLATE = `<section id="contato_acelera">
 
 import DefaultButton from './default-button.js';
 
-const ContactForm = Vue.component('ContactForm', {
+const ContactForm = Vue.component('contact-form', {
   template: TEMPLATE,
   components: {
     DefaultButton

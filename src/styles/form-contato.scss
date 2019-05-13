@@ -1,11 +1,17 @@
 #contato_acelera {
   background: $bg-contact;
   @include flexbox(row, center, flex-start, nowrap);
-  height: 895px;
   max-height: 895px;
+  height: 650px;
 
   .imagem-contato {
-    height: 895px;
+    height: 100%;
+    max-width: calc(100vw / 3);
+
+    img {
+      height: 100%;
+      max-width: 100%;
+    }
   }
   
   .form-contato {
@@ -14,7 +20,7 @@
     
     .contact-title {
       color: white;
-      font-size: 3.2rem;
+      font-size: 2.5rem;
       margin-bottom: 25px;
 
       &::after {
@@ -34,7 +40,7 @@
       height: 40px;
       width: 100%;
       border: 0;
-      padding: 0;
+      padding: 0 0 0 8px;
     }
 
     textarea {
@@ -49,6 +55,7 @@
         @include flexbox(column, flex-start, flex-start, wrap);
         width: calc(100% /3);
         margin: 10px 10px 25px;
+        font-size: 1.4rem;
 
         span {
           color: white;
@@ -64,12 +71,9 @@
 
     .contact-form__button {
       border: 0;
-      height: 70px;
-      width: 40%;
-      color: white;
-      font-size: 2rem;
-      font-family: $primary-font;
+      padding: 12px 20px;
       margin-top: 35px;
+      font-size: 1.6rem;
     }
   }
 

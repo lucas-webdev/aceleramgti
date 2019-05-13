@@ -21,4 +21,16 @@
 			}
 		}
 	}
+
+	@media screen and (max-width: 992px) {
+		padding-bottom: 0; 
+		
+		.half-container {
+			align-items: center;
+
+			&__content {
+				width: 100%;
+			}
+		}
+	}
 }

@@ -2,6 +2,12 @@
     @include flexbox(row, normal, flex-start, nowrap);
     height: calc(50vw);
 
+    &.carousel-item {
+        &.active {
+            display: flex;
+        }
+    }
+
     &.auto-height {
         height: auto;
     }

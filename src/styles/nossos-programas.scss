@@ -3,19 +3,23 @@
 	background-color: white;
 	color: $elementary-color;
 
+	> div:first-child {
+		margin-bottom: 50px;
+	}
+
 	.programas-acelera {
-		@include flexbox(row, flex-end, flex-start, wrap);
-		height: 400px;
+		@include flexbox(row, normal, flex-start, wrap);
 
 		.vertical-box {
 			width: calc(100% / 3);
-			height: 340px;
 			padding-top: 15px;
+			position: relative;
+			height: auto;
 
 			&:hover {
-				height: 350px;
 				border-image: linear-gradient(to right, $secondary-color 0%, $complementary-color 100%);
 				border-image-slice: 10;
+				top: -15px;
 				
 				.vertical-box__title {
 					color: $secondary-color;

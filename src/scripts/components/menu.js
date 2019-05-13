@@ -6,7 +6,7 @@ const TEMPLATE = `
                     <img src="./dist/images/logo_fumsoft.png" />
                 </a>
             </li>
-            <li v-for="item in menuItems">
+            <li class="menu-item" v-for="item in menuItems">
                 <a class="article-text-font" :href="item.link">{{item.text}}</a>
             </li>
         </ul>

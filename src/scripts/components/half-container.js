@@ -15,7 +15,7 @@ const template = `
 
 import DefaultButton from './default-button.js';
 
-const TwoHalfContainer = Vue.component('TwoHalfContainer', {
+const TwoHalfContainer = Vue.component('two-half-container', {
     template,
     components: {
         DefaultButton
