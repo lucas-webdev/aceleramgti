@@ -2,13 +2,13 @@ const template = `
 <div class="testimonials">
    <div class="testimonials__text">{{testimonialText}}</div>
    <div class="testimonials__image">
-    <img :src="testimonialImage"
-    <div class="testimonial__name">{{testimonailName}}</div>
-    <div class="testimonial__company">{{testimonalCompany}}</div>
+    <img :src="testimonialImage" :alt="testimonialCompany"/>
+    <div class="testimonials__name">{{testimonialName}}</div>
+    <div class="testimonials__company">{{testimonialCompany}}</div>
    </div>
 </div>`;
 
-const TestimonialsSlider = Vue.component('testimonials-slider', {
+const Testimonial = Vue.component('testimonial', {
     template,
     props: {
         testimonialText: {
@@ -19,11 +19,11 @@ const TestimonialsSlider = Vue.component('testimonials-slider', {
             type: String,
             default: ''
         },
-        testimonailName: {
+        testimonialName: {
             type: String,
             default: ''
         },
-        testimonalCompany: {
+        testimonialCompany: {
             type: String,
             default: ''
         }

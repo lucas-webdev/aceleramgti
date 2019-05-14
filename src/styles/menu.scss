@@ -4,24 +4,28 @@
 	position: relative;
 	
 	.menu-border {
-		border: 2px solid transparent;
+		border-bottom: 2px solid transparent;
 		border-image: linear-gradient(to right, $secondary-color 0%, $complementary-color 100%);
 		border-image-slice: 10;
+	    bottom: 0;
+	    width: 100%;
+	    left: 0;
+	    right: 0;
+	    position: absolute;
+	}
+
+	img.logo {
+		width: auto;
+		max-height: 35px;
 	}
 
 	ul {
-		list-style: none;
-		@include flexbox(row, center, space-around, nowrap);
-		height: 90px;
-		margin: 0;
+		// list-style: none;
+		// @include flexbox(row, center, space-around, nowrap);
+		// height: 90px;
+		// margin: 0;
 
 		li {
-			&.logo {
-				img {
-					width: auto;
-					max-height: 35px;
-				}
-			}
 
 			&.menu-item {
 				&:hover {

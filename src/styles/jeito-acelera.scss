@@ -68,4 +68,36 @@
 		}
 
 	} 
+
+	@media screen and (max-width: 768px) { 
+		.half-container {
+
+			&__content {
+
+				&.start {
+					&.right,
+					&.left, {
+						padding-left: 0;
+						padding-right: 0;
+						text-align: center;
+					}
+				}
+
+				.half-container__box {
+				    padding: 0 15px;
+    				margin-top: 0;
+				}
+
+			}
+
+
+			&__image {
+				width: 100%;
+			}
+
+			&::before {
+				display: none;
+			}
+		}
+	}
 }

@@ -6,7 +6,57 @@
 		margin-top: 30px;
 		background: url('../images/bg-depoimentos.png') no-repeat center;
 		background-size: cover;
-		height: 562px;
+		height: auto;
+		min-height: 300px;
 		width: 100%;
+		display: flex;
+		align-items: center;
+		color: white;
+
+		#testimonials_slider {
+			min-height: 250px;
+
+			.testimonials {
+				padding: 0 15%;
+
+				&__text {
+					font-size: 1.4rem;
+					margin-bottom: 20px;
+				}
+
+				&__image {
+					img {
+						width: 75px;
+					}
+				}
+
+				&__name {
+					margin-top: 5px;
+					font-size: 1.2rem;
+				}
+
+				&__company {
+					font-size: 1.1rem;
+					font-style: italic;
+				}
+
+			}
+
+			.carousel-control-next, 
+			.carousel-control-prev {
+				top: unset;
+				bottom: 30px;
+			}
+
+			.carousel-control-prev {
+				left: unset;
+				right: 40px;
+			}
+
+			@media screen and (max-width: 768px) { 
+				padding: 25px 0;
+			}
+		}
+
 	}
 }
